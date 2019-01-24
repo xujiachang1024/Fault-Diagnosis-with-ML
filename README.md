@@ -1,2 +1,1 @@
-# Fault-Diagnosis
-Fault Diagnosis with Machine Learning Methods
+# Fault Diagnosis with Machine Learning Methods
