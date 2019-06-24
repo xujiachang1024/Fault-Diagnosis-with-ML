@@ -2,7 +2,7 @@
     Feature 6: the skewness factor
     @param x: a signal seris
     @param N: the number of data points
-    @return F1: feature 6, the skewness factor
+    @return F6: feature 6, the skewness factor
 %}
 function F6 = f6_skewness_factor(x, N)
 x_mean = mean(x);
