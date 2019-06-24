@@ -6,7 +6,7 @@
     @param F8: feature 8
     @return F9: feature 9
 %}
-function F9 = f8(s, K, F7, F8)
+function F9 = f9(s, K, F7, F8)
     sum_numerator = 0.0
     for k=1:K
         sum_numerator = sum_numerator + (s(k) - F7) .^ 3;
