@@ -5,7 +5,7 @@
     @param f: the frequency values of the spectrum lines
     @return F11: feature 11
 %}
-function F11 = f11(s, K, F7, F8)
+function F11 = f11(s, K, f)
     sum_numerator = 0.0
     for k=1:K
         sum_numerator = sum_numerator + f(k) * s(k);
