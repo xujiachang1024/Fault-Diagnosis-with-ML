@@ -2,7 +2,7 @@
     Feature 5: the kurtosis factor
     @param x: a signal seris
     @param N: the number of data points
-    @return F1: feature 5, the kurtosis factor
+    @return F5: feature 5, the kurtosis factor
 %}
 function F5 = f5_kurtosis_factor(x, N)
 x_mean = mean(x);
