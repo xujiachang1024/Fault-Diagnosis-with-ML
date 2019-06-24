@@ -8,7 +8,7 @@
 function F8 = f8(s, K, F7)
     sum_numerator = 0.0
     for k=1:K
-        sum_numerator = sum_numerator + (s(k) - F7) .^ 2
+        sum_numerator = sum_numerator + (s(k) - F7) .^ 2;
     end
     F8 = sum_numerator / (K - 1);
 end
