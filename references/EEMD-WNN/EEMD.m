@@ -6,8 +6,8 @@
     @return a: the means of each of the IMFs
 %}
 function a = EEMD(x, M, I)
-    T, _ = size(x)
-    imf = zeros(T, I, M)
+    T, ncol = size(x);
+    imf = zeros(T, I, M);
     for m=1:M
         % add a different white noise series $n_m with the given amplitude to the investigate signal $x
         x_m = x + n_m;
@@ -15,8 +15,8 @@ function a = EEMD(x, M, I)
         imf(:, :, M), residual = emd(x_m, 'MaxNumIMF', I);
     end
     % calculate the ensemble mean of the M trials for each IMF
-    a = zeros(T, I)
-    for i=1:I:
+    a = zeros(T, I);
+    for i=1:I
         a(:, i) = mean(imf(i, :, :), 3);
     end
 end
