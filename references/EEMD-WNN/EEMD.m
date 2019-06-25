@@ -17,6 +17,6 @@ function a = EEMD(x, M, I)
     % calculate the ensemble mean of the M trials for each IMF
     a = zeros(T, I);
     for i=1:I
-        a(:, i) = mean(imf(i, :, :), 3);
+        a(:, i) = mean(imf(:, i, :), 3);
     end
 end
