@@ -7,16 +7,14 @@
     @return F: the feature vector
 %}
 function F = features_19(x, N, sf, plot)
-    % specify the parameters of a signal
-    st = 1 / sf;            % the sampling period
-    t = (0:L-1) * st;       % the time vector
     % compute the Fourier transform of the signal
     Y = fft(x);
     % compute the two-sided spectrum P2
-    P2 = abd(Y / N);
+    P2 = abs(Y / N);
     % compute the single-sided spectrum P1
     P1 = P2(1:(N / 2 + 1));
     P1(2:end-1) = 2 * P1(2:end-1);
+    P1
     % define the fequency domain fd and plot the single-sided spectrum P1
     if plot ~= false
         fd = sf * (0:(N/2)) / N;
@@ -26,7 +24,7 @@ function F = features_19(x, N, sf, plot)
         ylabel('|P1(f)|')
     end
     % compute the feature vector F
-%     F = zeros(19, 1);
+    F = zeros(19, 1);
 %     F(1, :) = f1_shape_factor(x, N);
 %     F(2, :) = f2_crest_factor(x, N);
 %     F(3, :) = f3_impulse_factor(x, N);
