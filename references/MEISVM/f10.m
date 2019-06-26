@@ -7,7 +7,7 @@
     @return F10: feature 10
 %}
 function F10 = f10(s, K, F7, F8)
-    sum_numerator = 0.0
+    sum_numerator = 0.0;
     for k=1:K
         sum_numerator = sum_numerator + (s(k) - F7) .^ 4;
     end
