@@ -6,7 +6,7 @@
     @return F8: feature 8
 %}
 function F8 = f8(s, K, F7)
-    sum_numerator = 0.0
+    sum_numerator = 0.0;
     for k=1:K
         sum_numerator = sum_numerator + (s(k) - F7) .^ 2;
     end
