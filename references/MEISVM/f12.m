@@ -7,7 +7,7 @@
     @return F12: feature 12
 %}
 function F12 = f12(s, K, f, F11)
-    sum_numerator = 0.0
+    sum_numerator = 0.0;
     for k=1:K
         sum_numerator = sum_numerator + (f(k) - F11) .^ 2 * s(k);
     end
