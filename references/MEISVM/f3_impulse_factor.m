@@ -5,5 +5,5 @@
     @return F3: feature 3, the impulse
 %}
 function F3 = f3_impulse_factor(x, N)
-F3 = maxabs(x) / (sumabs(x) / N);
+    F3 = maxabs(x) / (sumabs(x) / N);
 end
