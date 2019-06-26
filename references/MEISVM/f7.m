@@ -5,5 +5,5 @@
     @return F7: feature 7, the vibration energy in the frequency domain
 %}
 function F7 = f7(s, K)
-F7 = sum(s) / K;
+    F7 = sum(s) / K;
 end
