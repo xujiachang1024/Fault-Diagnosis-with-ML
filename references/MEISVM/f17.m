@@ -12,5 +12,5 @@ function F17 = f17(s, K, f, F11, F12)
     for k=1:K
         sum_numerator = sum_numerator + (f(k) - F11) .^ 3 * s(k);
     end
-    F17 = sum_numerator / (K * F12 .^ 3));
+    F17 = sum_numerator / (K * F12 .^ 3);
 end
