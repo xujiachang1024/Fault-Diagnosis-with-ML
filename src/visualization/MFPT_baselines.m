@@ -12,4 +12,5 @@ for m=1:M
     title(strcat('Vibration Signal of MFPT Baseline #', num2str(m)));
     xlabel('t');
     ylabel('x(t)');
+    ylim([-5 5]);
 end
