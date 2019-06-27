@@ -9,7 +9,7 @@ for m=1:M
     plot(t, x(:, m)');
     pbaspect([80 1 1]);
 %     set(gca,'LooseInset',get(gca,'TightInset'));
-    title(strcat('Vibration Signal of MFPT Outter Race Fault #', num2str(m), ', load=270 lbs'));
+    title(strcat('Vibration Signal of MFPT Outer Race Fault #', num2str(m), ', load=270 lbs'));
     xlabel('t');
     ylabel('x(t)');
     ylim([-5 5]);
