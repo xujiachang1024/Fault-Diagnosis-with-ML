@@ -7,14 +7,14 @@ for i=1:7
     x(:, i) = bearing.gs;
 end
 % splice
-cache = x;
-clear x;
-N = 12207;
-M = 7 * (146484 / 12207);
-x = zeros(N, M);
-for i=1:7
-    x(:, (7*(i-1)+1):(7*i)) = cache((12207*(i-1)+1):(12207*i), :);
-end
+% cache = x;
+% clear x;
+% N = 12207;
+% M = 7 * (146484 / 12207);
+% x = zeros(N, M);
+% for i=1:7
+%     x(:, (7*(i-1)+1):(7*i)) = cache((12207*(i-1)+1):(12207*i), :);
+% end
 % write
 data_sink_path = 'data/interim/MFPT/ir_faults_vload.mat';
 save(data_sink_path, 'x');
