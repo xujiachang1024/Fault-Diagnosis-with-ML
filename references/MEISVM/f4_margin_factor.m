@@ -6,8 +6,8 @@
 %}
 function F4 = f4_margin_factor(x, N)
     sum_sqrt_abs = 0.0;
-    for i=1:N
+    for n=1:N
         sum_sqrt_abs = sum_sqrt_abs + sqrt(abs(x(n)));
     end
-    F4 = maxabs(x) / (sum_sqrt_abs / N) .^ 2;
+    F4 = max(abs(x)) / (sum_sqrt_abs / N) .^ 2;
 end
