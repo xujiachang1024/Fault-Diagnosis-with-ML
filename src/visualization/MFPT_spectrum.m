@@ -4,9 +4,9 @@ load('data/interim/MFPT/baselines.mat');
 sf = 97656;
 figure();hold on
 for m=1:M
-    [fd, P1] = compute_spectrum(x(:, m), N, sf);
-    subplot(4, 3, m);
-    plot(fd', P1);
+    [f, s] = compute_spectrum(x(:, m), N, sf);
+    subplot(3, 1, m);
+    plot(f, s);
     title(strcat('Single-Sided Amplitude Spectrum of x(t), MFPT Baseline #', num2str(m)));
     xlabel('frequency domain (Hz)');
     ylabel('|P1(f)|');
@@ -21,7 +21,7 @@ sf = 97656;
 figure();hold on
 for m=1:M
     [fd, P1] = compute_spectrum(x(:, m), N, sf);
-    subplot(4, 3, m);
+    subplot(3, 1, m);
     plot(fd', P1);
     title(strcat('Single-Sided Amplitude Spectrum of x(t), MFPT OR Fault #', num2str(m), ', load=270 lbs'));
     xlabel('frequency domain (Hz)');
