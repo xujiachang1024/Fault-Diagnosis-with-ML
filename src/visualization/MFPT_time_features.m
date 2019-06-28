@@ -30,14 +30,15 @@ for m=1:M
     F_time(:, 12 + 12 + 7 + m) = combine_time_features(x(:, m), N);
 end
 
+figure();hold on
 for f=1:F
-    figure();hold on
+    subplot(3, 2, f);hold on
     plot(F_time(f, 1:12));
     plot(F_time(f, 13:24));
     plot(F_time(f, 25:31));
     plot(F_time(f, 32:38));
     title(strcat('Feature #', num2str(f)));
-    legend('Baselines', 'OR Faults', 'OR Faults (vload)', 'IR Faults (vload)');
     xlabel('Sample point')
     ylabel(strcat('F', num2str(f)))
+    legend('Baselines', 'OR Faults', 'OR Faults (vload)', 'IR Faults (vload)');
 end
