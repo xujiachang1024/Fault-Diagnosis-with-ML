@@ -8,7 +8,7 @@
 function F = combine_19_features(x, N, sf)
     % compute the spectrum
     [f, s] = compute_spectrum(x, N, sf);
-    K = size(s, 1)
+    K = size(s, 1);
     % combine the time-domain features
     F(1:6, :) = combine_time_features(x, N)
     % combine the frequency-domain features
