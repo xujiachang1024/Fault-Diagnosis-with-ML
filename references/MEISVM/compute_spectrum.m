@@ -14,5 +14,5 @@ function [fd, P1] = compute_spectrum(x, N, sf)
     % compute the two-sided spectrum P2
     P2 = abs(Y / N);
     % compute the single-sided spectrum P1
-    P1 = P2(1:(int8(N / 2) + 1));
+    P1 = P2(1:(N / 2 + 1));
     P1(2:end-1) = 2 * P1(2:end-1);
