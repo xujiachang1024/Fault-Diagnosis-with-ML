@@ -5,7 +5,7 @@
     @param f: the frequency values of the spectrum lines
     @return F_freq: the frequency-domain feature vector
 %}
-function F_freq = combine_freq_freatures(s, K, f)
+function F_freq = combine_freq_features(s, K, f)
     F_freq(1, :) = f7(s, K);
     F_freq(2, :) = f8(s, K, F_freq(1, :));
     F_freq(3, :) = f9(s, K, F_freq(1, :), F_freq(2, :));
