@@ -37,11 +37,10 @@ figure();hold on
 for f=1:F
     subplot(3, 2, f);hold on
     plot(F_time(f, 1:ss(1)));
-    plot(F_time(f, (ss(1)+1):sum(ss(1:2))));
-    plot(F_time(f, (sum(ss(1:2))+1):sum(ss(1:3))));
+    plot(F_time(f, (ss(1)+1):sum(ss(1:3))));
     plot(F_time(f, (sum(ss(1:3))+1):sum(ss)));
     title(strcat('Feature #', num2str(f)));
     xlabel('Sample point')
     ylabel(strcat('F', num2str(f)))
-    legend('Baselines', 'OR Faults', 'OR Faults (vload)', 'IR Faults (vload)');
+    legend('Baselines', 'OR Faults', 'IR Faults');
 end
