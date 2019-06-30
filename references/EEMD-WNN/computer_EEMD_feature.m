@@ -5,7 +5,7 @@
     @param I: the number of intrinsic mode functions (IMFs)
     @return a: the means of each of the IMFs
 %}
-function a = EEMD(x, M, I)
+function a = computer_EEMD_feature(x, M, I)
     [T, ~] = size(x);
     imf = zeros(T, I, M);
     for m=1:M
