@@ -11,5 +11,5 @@ for m=1:M
 end
 clearvars -except x;
 
-data_sink_path = 'data/interim/CWRU/a2_or_faults_014.mat';
+data_sink_path = 'data/interim/CWRU/a2_or_fault_014.mat';
 save(data_sink_path, 'x');
