@@ -4,7 +4,7 @@
     @return eigenvalue
     @return eigenvector
 %}
-function [eigenvalue, eigenvector] = singular_value_decomposition(X)
+function [eigenvalue, eigenvector, SV] = singular_value_decomposition(X)
     % generate an L*L matrix
     S = X * X';
     % compute the eigens
@@ -15,5 +15,7 @@ function [eigenvalue, eigenvector] = singular_value_decomposition(X)
     [eigenvalue, sorted] = sort(eigenvalue, 'descend');
     % sort the eigenvectors
     eigenvector = eigenvector(:, sorted);
+    % compute singular values
+    SV = sqrt(eigenvalue);
 end
 
