@@ -45,39 +45,7 @@ end
 % combine freq-domain features for 021 inner race fault
 load('data/interim/CWRU/a5_ir_fault_021.mat');
 [N, M] = size(x);
-F_freq_a5 = zeros(F, M);clear;
-F = 13;
-
-% combine freq-domain features for baselines
-load('data/interim/CWRU/baselines.mat');
-M = size(de, 2);
-F_freq_baseline = zeros(F, M);
-for m=1:M
-    x = de{m};
-    N = size(x, 1);
-    fs = 12000;
-    [f, s] = compute_spectrum(x, N, sf);
-    K = size(s, 1);
-    F_freq_baseline(:, m) = combine_freq_features(s, K, f);clear;
-F = 13;
-
-% combine freq-domain features for baselines
-load('data/interim/CWRU/baselines.mat');
-M = size(de, 2);
-F_freq_baseline = zeros(F, M);
-for m=1:M
-    x = de{m};
-    N = size(x, 1);
-    fs = 12000;
-    [f, s] = compute_spectrum(x, N, sf);
-    K = size(s, 1);
-    F_freq_baseline(:, m) = combine_freq_features(s, K, f);
-end
-
-
-end
-
-
+F_freq_a5 = zeros(F, M);
 for m=1:M
     [f, s] = compute_spectrum(x(:, m), N, sf);
     [K, ~] = size(s);
