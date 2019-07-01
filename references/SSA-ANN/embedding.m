@@ -5,6 +5,7 @@
     @return X: the trajectory matrix
 %}
 function X = embedding(x, L)
+    N = size(x, 1);
     K = N - L + 1;
     X = zeros(L, K);
     for k=1:K
