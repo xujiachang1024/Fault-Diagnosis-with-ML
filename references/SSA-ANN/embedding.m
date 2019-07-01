@@ -5,11 +5,11 @@
     @return X: the trajectory matrix
 %}
 function X = embedding(x, L)
-    N = size(x, 1);
+    [N, ~] = size(x);
     K = N - L + 1;
     X = zeros(L, K);
     for k=1:K
-        X(:, k) = x(k:(K + L -1), :);
+        X(:, k) = x(k:(k + L - 1), :);
     end
 end
 
