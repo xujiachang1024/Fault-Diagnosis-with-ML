@@ -263,7 +263,7 @@ end
 
 figure();hold on
 for f=1:F
-    subplot(3, 2, f);hold on
+    subplot(5, 3, f);hold on
     plot(F_freq_baseline(f, :), 'Marker' , '.');
     plot(F_freq_b_faults_d12(f, :), 'Marker' , 'o');
     plot(F_freq_b_faults_d48(f, :), 'Marker' , 'o');
@@ -271,15 +271,15 @@ for f=1:F
     plot(F_freq_ir_faults_d12(f, :), 'Marker' , '+');
     plot(F_freq_ir_faults_d48(f, :), 'Marker' , '+');
     plot(F_freq_ir_faults_fan(f, :), 'Marker' , '+');
-    plot(F_freq_or_faults_d12_centered(f, :), 'Marker' , '*');
-    plot(F_freq_or_faults_d48_centered(f, :), 'Marker' , '*');
-    plot(F_freq_or_faults_fan_centered(f, :), 'Marker' , '*');
-    plot(F_freq_or_faults_d12_opposite(f, :), 'Marker' , 's');
-    plot(F_freq_or_faults_d48_opposite(f, :), 'Marker' , 's');
-    plot(F_freq_or_faults_fan_opposite(f, :), 'Marker' , 's');
-    plot(F_freq_or_faults_d12_orthogonal(f, :), 'Marker' , '^');
-    plot(F_freq_or_faults_d48_orthogonal(f, :), 'Marker' , '^');
-    plot(F_freq_or_faults_fan_orthogonal(f, :), 'Marker' , '^');
+%     plot(F_freq_or_faults_d12_centered(f, :), 'Marker' , '*');
+%     plot(F_freq_or_faults_d48_centered(f, :), 'Marker' , '*');
+%     plot(F_freq_or_faults_fan_centered(f, :), 'Marker' , '*');
+%     plot(F_freq_or_faults_d12_opposite(f, :), 'Marker' , 's');
+%     plot(F_freq_or_faults_d48_opposite(f, :), 'Marker' , 's');
+%     plot(F_freq_or_faults_fan_opposite(f, :), 'Marker' , 's');
+%     plot(F_freq_or_faults_d12_orthogonal(f, :), 'Marker' , '^');
+%     plot(F_freq_or_faults_d48_orthogonal(f, :), 'Marker' , '^');
+%     plot(F_freq_or_faults_fan_orthogonal(f, :), 'Marker' , '^');
     title(strcat('Feature #', num2str(f)));
     xlabel('Sample point');
     ylabel(strcat('F', num2str(f)));
