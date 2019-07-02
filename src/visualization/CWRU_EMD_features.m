@@ -66,7 +66,7 @@ for f=1:m_EMD
     plot(F_EMD_a5(f, :), 'Marker' , '^');
     plot(F_EMD_a6(f, :), 'Marker' , 'p');
     plot(F_EMD_a7(f, :), 'Marker' , 'h');
-    title(strcat('CWRU Data Set: EMD Feature #', num2str(f)));
+    title(strcat('CWRU Data: EMD Feature #', num2str(f)));
     xlabel('Sample point');
     ylabel(strcat('F', num2str(f)));
     legend('Normal', 'OR 014', 'IR 007', 'IR 014', 'IR 021', 'IR 028', 'B 014', 'Location', 'northeastoutside');
