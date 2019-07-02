@@ -3,10 +3,11 @@
     @param x: a signal series
     @param N: the number of data points
     @param sf: the sampling frequency
+    @param z: the proportation of standard deviation from mean of spectrum
     @return f: the frequency
     @return s: the spectrum
 %}
-function [f, s] = compute_spectrum(x, N, sf)
+function [f, s] = compute_spectrum(x, N, sf, z)
     % compute the frequency domain
     fd = (sf * (0:(N/2)) / N)';
     % compute the Fourier transform of the signal
@@ -19,10 +20,7 @@ function [f, s] = compute_spectrum(x, N, sf)
     % filter spikes
     s_avg = mean(P1);
     s_std = std(P1);
-    filtered = P1 > (s_avg + s_std);
+    filtered = P1 > (s_avg + z * s_std);
     f = fd(filtered);
     s = P1(filtered);
-%     figure();hold on
-%     stem(f, s, 'Color', 'k');
-%     stem(fd(~filtered), P1(~filtered));
 end
