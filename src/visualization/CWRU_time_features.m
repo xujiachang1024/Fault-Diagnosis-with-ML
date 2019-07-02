@@ -70,5 +70,5 @@ for f=1:F
     xlabel('Sample point');
     ylabel(strcat('F', num2str(f)));
     legend('Normal', 'OR 014', 'IR 007', 'IR 014', 'IR 021', 'IR 028', 'B 014', 'Location', 'northeastoutside');
-    saveas(fig, strcat('reports/figures/CWRU_time_F', num2str(f), '.png'));
+    saveas(fig, strcat('reports/figures/CWRU_stats_F', num2str(f), '_time.png'));
 end
