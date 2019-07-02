@@ -1,13 +1,14 @@
 clear;
 F = 13;
 sf = 12000;
+z = 1;
 
 % combine freq-domain features for normal
 load('data/interim/CWRU/a1_normal.mat');
 [N, M] = size(x);
 F_freq_a1 = zeros(F, M);
 for m=1:M
-    [f, s] = compute_spectrum(x(:, m), N, sf);
+    [f, s] = compute_spectrum(x(:, m), N, sf, z);
     [K, ~] = size(s);
     F_freq_a1(:, m) = combine_freq_features(s, K, f);
 end
@@ -17,7 +18,7 @@ load('data/interim/CWRU/a2_or_fault_014.mat');
 [N, M] = size(x);
 F_freq_a2 = zeros(F, M);
 for m=1:M
-    [f, s] = compute_spectrum(x(:, m), N, sf);
+    [f, s] = compute_spectrum(x(:, m), N, sf, z);
     [K, ~] = size(s);
     F_freq_a2(:, m) = combine_freq_features(s, K, f);
 end
@@ -27,7 +28,7 @@ load('data/interim/CWRU/a3_ir_fault_007.mat');
 [N, M] = size(x);
 F_freq_a3 = zeros(F, M);
 for m=1:M
-    [f, s] = compute_spectrum(x(:, m), N, sf);
+    [f, s] = compute_spectrum(x(:, m), N, sf, z);
     [K, ~] = size(s);
     F_freq_a3(:, m) = combine_freq_features(s, K, f);
 end
@@ -37,7 +38,7 @@ load('data/interim/CWRU/a4_ir_fault_014.mat');
 [N, M] = size(x);
 F_freq_a4 = zeros(F, M);
 for m=1:M
-    [f, s] = compute_spectrum(x(:, m), N, sf);
+    [f, s] = compute_spectrum(x(:, m), N, sf, z);
     [K, ~] = size(s);
     F_freq_a4(:, m) = combine_freq_features(s, K, f);
 end
@@ -47,7 +48,7 @@ load('data/interim/CWRU/a5_ir_fault_021.mat');
 [N, M] = size(x);
 F_freq_a5 = zeros(F, M);
 for m=1:M
-    [f, s] = compute_spectrum(x(:, m), N, sf);
+    [f, s] = compute_spectrum(x(:, m), N, sf, z);
     [K, ~] = size(s);
     F_freq_a5(:, m) = combine_freq_features(s, K, f);
 end
@@ -57,7 +58,7 @@ load('data/interim/CWRU/a6_ir_fault_028.mat');
 [N, M] = size(x);
 F_freq_a6 = zeros(F, M);
 for m=1:M
-    [f, s] = compute_spectrum(x(:, m), N, sf);
+    [f, s] = compute_spectrum(x(:, m), N, sf, z);
     [K, ~] = size(s);
     F_freq_a6(:, m) = combine_freq_features(s, K, f);
 end
@@ -67,7 +68,7 @@ load('data/interim/CWRU/a7_b_fault_014.mat');
 [N, M] = size(x);
 F_freq_a7 = zeros(F, M);
 for m=1:M
-    [f, s] = compute_spectrum(x(:, m), N, sf);
+    [f, s] = compute_spectrum(x(:, m), N, sf, z);
     [K, ~] = size(s);
     F_freq_a7(:, m) = combine_freq_features(s, K, f);
 end
