@@ -57,9 +57,8 @@ for m=1:M
     F_time_a7(:, m) = combine_time_features(x(:, m), N);
 end
 
-figure();hold on
 for f=1:F
-    subplot(3, 2, f);hold on
+    fig = figure('Position', [0 0 400 300]);hold on
     plot(F_time_a1(f, :), 'Marker' , 'o');
     plot(F_time_a2(f, :), 'Marker' , '+');
     plot(F_time_a3(f, :), 'Marker' , '*');
@@ -67,8 +66,9 @@ for f=1:F
     plot(F_time_a5(f, :), 'Marker' , '^');
     plot(F_time_a6(f, :), 'Marker' , 'p');
     plot(F_time_a7(f, :), 'Marker' , 'h');
-    title(strcat('Feature #', num2str(f)));
+    title(strcat('CWRU Data Set: Time-Domain Feature #', num2str(f)));
     xlabel('Sample point');
     ylabel(strcat('F', num2str(f)));
-    legend('Normal', 'OR 014', 'IR 007', 'IR 014', 'IR 021', 'IR 028', 'B 014');
+    legend('Normal', 'OR 014', 'IR 007', 'IR 014', 'IR 021', 'IR 028', 'B 014', 'Location', 'northeastoutside');
+    saveas(fig, strcat('reports/figures/CWRU_time_F', num2str(f), '.png'));
 end
