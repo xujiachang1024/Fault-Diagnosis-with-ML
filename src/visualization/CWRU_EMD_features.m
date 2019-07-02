@@ -57,9 +57,8 @@ for m=1:M
     F_EMD_a7(:, m) = compute_EMD_feature(x(:, m), m_EMD);
 end
 
-figure();hold on
 for f=1:m_EMD
-    subplot(2, 3, f);hold on
+    fig = figure('Position', [0 0 400 300]);hold on
     plot(F_EMD_a1(f, :), 'Marker' , 'o');
     plot(F_EMD_a2(f, :), 'Marker' , '+');
     plot(F_EMD_a3(f, :), 'Marker' , '*');
@@ -67,8 +66,9 @@ for f=1:m_EMD
     plot(F_EMD_a5(f, :), 'Marker' , '^');
     plot(F_EMD_a6(f, :), 'Marker' , 'p');
     plot(F_EMD_a7(f, :), 'Marker' , 'h');
-    title(strcat('Feature #', num2str(f)));
+    title(strcat('CWRU Data Set: EMD Feature #', num2str(f)));
     xlabel('Sample point');
     ylabel(strcat('F', num2str(f)));
-    legend('Normal', 'OR 014', 'IR 007', 'IR 014', 'IR 021', 'IR 028', 'B 014');
+    legend('Normal', 'OR 014', 'IR 007', 'IR 014', 'IR 021', 'IR 028', 'B 014', 'Location', 'northeastoutside');
+    saveas(fig, strcat('reports/figures/CWRU_EMD_F', num2str(f), '.png'));
 end
