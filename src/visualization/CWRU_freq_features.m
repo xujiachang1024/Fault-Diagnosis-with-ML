@@ -7,6 +7,7 @@ load('data/interim/CWRU/a1_normal.mat');
 [N, M] = size(x);
 F_freq_a1 = zeros(F, M);
 for m=1:M
+    which compute_spectrum
     [f, s] = compute_spectrum(x(:, m), N, sf);
     [K, ~] = size(s);
     F_freq_a1(:, m) = combine_freq_features(s, K, f);
