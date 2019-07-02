@@ -81,7 +81,7 @@ for f=1:F
     plot(F_freq_a5(f, :), 'Marker' , '^');
     plot(F_freq_a6(f, :), 'Marker' , 'p');
     plot(F_freq_a7(f, :), 'Marker' , 'h');
-    title(strcat('CWRU Data Set: Frequency-Domain Feature #', num2str(6 + f)));
+    title(strcat('CWRU Data: Frequency-Domain Feature #', num2str(6 + f)));
     xlabel('Sample point');
     ylabel(strcat('F', num2str(6 + f)));
     legend('Normal', 'OR 014', 'IR 007', 'IR 014', 'IR 021', 'IR 028', 'B 014', 'Location', 'northeastoutside');
