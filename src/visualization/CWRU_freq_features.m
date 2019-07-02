@@ -1,6 +1,6 @@
 clear;
 F = 13;
-fs = 12000;
+sf = 12000;
 
 % combine freq-domain features for normal
 load('data/interim/CWRU/a1_normal.mat');
@@ -74,7 +74,7 @@ end
 
 figure();hold on
 for f=1:F
-    subplot(3, 2, f);hold on
+    subplot(3, 5, f);hold on
     plot(F_freq_a1(f, :), 'Marker' , 'o');
     plot(F_freq_a2(f, :), 'Marker' , '+');
     plot(F_freq_a3(f, :), 'Marker' , '*');
