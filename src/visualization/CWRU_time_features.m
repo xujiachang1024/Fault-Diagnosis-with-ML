@@ -66,7 +66,7 @@ for f=1:F
     plot(F_time_a5(f, :), 'Marker' , '^');
     plot(F_time_a6(f, :), 'Marker' , 'p');
     plot(F_time_a7(f, :), 'Marker' , 'h');
-    title(strcat('CWRU Data Set: Time-Domain Feature #', num2str(f)));
+    title(strcat('CWRU Data: Time-Domain Feature #', num2str(f)));
     xlabel('Sample point');
     ylabel(strcat('F', num2str(f)));
     legend('Normal', 'OR 014', 'IR 007', 'IR 014', 'IR 021', 'IR 028', 'B 014', 'Location', 'northeastoutside');
