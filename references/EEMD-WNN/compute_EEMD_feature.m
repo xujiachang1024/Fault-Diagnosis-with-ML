@@ -4,12 +4,14 @@
     @param M: the number of ensemble
     @param I: the number of intrinsic mode functions (IMFs)
     @return a: the means of each of the IMFs
+    @return f: a column vector of normalised energy of IMFs
 %}
-function a = compute_EEMD_feature(x, M, I)
+function [a, f] = compute_EEMD_feature(x, M, I)
     [T, ~] = size(x);
     imf = zeros(T, I, M);
     for m=1:M
         % add a different white noise series $n_m with the given amplitude to the investigate signal $x
+        n_m = randn(size(x)) / 100;
         x_m = x + n_m;
         % decompose the noise-added signal $x_m into I IMFs
         [imf(:, :, M), ~] = emd(x_m, 'MaxNumIMF', I);
@@ -19,4 +21,12 @@ function a = compute_EEMD_feature(x, M, I)
     for i=1:I
         a(:, i) = mean(imf(:, i, :), 3);
     end
+    % construct a column vector with the energy as element
+    e = zeros(I, 1);
+    for i=1:I
+        e(i, :) = sumsqr(a(:, i));
+    end
+    % normalise the feature vector, and make it a column vector
+    total = sqrt(sumsqr(e));
+    f = e / total;
 end
