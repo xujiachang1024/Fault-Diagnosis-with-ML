@@ -19,5 +19,6 @@ function F_freq = combine_freq_features(s, K, f)
     F_freq(11, :) = f17(s, K, f, F_freq(5, :), F_freq(6, :));
     F_freq(12, :) = f18(s, K, f, F_freq(5, :), F_freq(6, :));
     F_freq(13, :) = f19(s, K, f, F_freq(5, :), F_freq(6, :));
+    F_freq = real(F_freq);
 end
 
