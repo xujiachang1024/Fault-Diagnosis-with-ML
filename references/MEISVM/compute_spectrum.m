@@ -22,3 +22,4 @@ function [f, s] = compute_spectrum(x, N, sf)
     filtered = P1 > (s_avg + s_std);
     f = fd(filtered);
     s = P1(filtered);
+end
