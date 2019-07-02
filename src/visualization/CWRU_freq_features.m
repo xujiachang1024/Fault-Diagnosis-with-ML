@@ -72,9 +72,8 @@ for m=1:M
     F_freq_a7(:, m) = combine_freq_features(s, K, f);
 end
 
-figure();hold on
 for f=1:F
-    subplot(3, 5, f);hold on
+    fig = figure('Position', [0 0 400 300]);hold on
     plot(F_freq_a1(f, :), 'Marker' , 'o');
     plot(F_freq_a2(f, :), 'Marker' , '+');
     plot(F_freq_a3(f, :), 'Marker' , '*');
@@ -82,8 +81,9 @@ for f=1:F
     plot(F_freq_a5(f, :), 'Marker' , '^');
     plot(F_freq_a6(f, :), 'Marker' , 'p');
     plot(F_freq_a7(f, :), 'Marker' , 'h');
-    title(strcat('Feature #', num2str(f)));
+    title(strcat('CWRU Data Set: Frequency-Domain Feature #', num2str(6 + f)));
     xlabel('Sample point');
-    ylabel(strcat('F', num2str(f)));
-    legend('Normal', 'OR 014', 'IR 007', 'IR 014', 'IR 021', 'IR 028', 'B 014');
+    ylabel(strcat('F', num2str(6 + f)));
+    legend('Normal', 'OR 014', 'IR 007', 'IR 014', 'IR 021', 'IR 028', 'B 014', 'Location', 'northeastoutside');
+    saveas(fig, strcat('reports/figures/CWRU_freq_F', num2str(6 + f), '.png'));
 end
