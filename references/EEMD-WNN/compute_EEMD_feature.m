@@ -30,4 +30,9 @@ function [a, f] = compute_EEMD_feature(x, M_ens, I_imf)
     % normalise the feature vector, and make it a column vector
     total = sqrt(sumsqr(e));
     f = e / total;
+    % compute the kurtosis values of IMFs
+    k = zeros(I_imf, 1);
+    for i=1:I_imf
+        k(i, :) = kurtosis(a(:, i));
+    end
 end
