@@ -1,6 +1,6 @@
 clear;
 M_ens = 10;
-I_imf = 5;
+I_imf = 4;
 
 % combine EEMD features for normal
 load('data/interim/CWRU/a1_normal.mat');
