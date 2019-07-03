@@ -7,7 +7,8 @@
     @return f: a column vector of normalised energy of IMFs
 %}
 function [a, f] = compute_EEMD_feature(x, M_ens, I_imf)
-    [N, ~] = size(x);
+    % N: the number of data points in each sample
+    [N, ~] = size(x); 
     imf = zeros(N, I_imf, M_ens);
     for m=1:M_ens
         % add a different white noise series $n_m with the given amplitude to the investigate signal $x
