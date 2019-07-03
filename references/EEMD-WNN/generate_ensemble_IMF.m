@@ -6,7 +6,7 @@
     @return a: the means of each of the IMFs
     @return f: a column vector of normalised energy of IMFs
 %}
-function [a, f] = compute_EEMD_feature(x, M_ens, I_imf)
+function [a, f] = generate_ensemble_IMF(x, M_ens, I_imf)
     % N: the number of data points in each sample
     [N, ~] = size(x); 
     imf = zeros(N, I_imf, M_ens);
