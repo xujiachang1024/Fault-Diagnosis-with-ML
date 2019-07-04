@@ -5,5 +5,5 @@
     @return F1: feature 1, the shape factor
 %}
 function F1 = f1_shape_factor(x, N)
-    F1 = sqrt(sumsqr(x) / N) / (sumabs(x) / N);
+    F1 = sqrt(sum(x .^ 2) / N) / (sum(abs(x)) / N);
 end
