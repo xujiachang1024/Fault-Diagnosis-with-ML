@@ -6,9 +6,5 @@
     @return F13: feature 13
 %}
 function F13 = f13(s, K, f)
-    sum_numerator = 0.0;
-    for k=1:K
-        sum_numerator = sum_numerator + f(k) .^ 2 * s(k);
-    end
-    F13 = sqrt(sum_numerator / sum(s));
+    F13 = sqrt(sum((f .^ 2) .* s) / sum(s));
 end
