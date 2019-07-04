@@ -6,11 +6,5 @@
     @return F15: feature 15
 %}
 function F15 = f15(s, K, f)
-    sum_numerator = 0.0;
-    sum_denominator = 0.0;
-    for k=1:K
-        sum_numerator = sum_numerator + f(k) .^ 2 * s(k);
-        sum_denominator = sum_denominator + f(k) .^ 4 * s(k);
-    end
-    F15 = sum_numerator / sqrt(sum(s) * sum_denominator);
+    F15 = sum((f .^ 2) .* s) / sqrt(sum(s) * sum((f .^ 4) .* s));
 end
