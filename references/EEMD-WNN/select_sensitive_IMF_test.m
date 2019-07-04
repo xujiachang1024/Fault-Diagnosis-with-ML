@@ -10,4 +10,4 @@ for m=1:M
     [A_a1(:, :, m), ~] = generate_ensemble_IMF(x(:, m), M_ens, I_imf);
 end
 [A_sensitive_a1, i_sensitive] = select_sensitive_IMF(A_a1, false);
-F = extract_EEMD_features(A_sensitive_a1);
+F = extract_EEMD_feature(A_sensitive_a1);
