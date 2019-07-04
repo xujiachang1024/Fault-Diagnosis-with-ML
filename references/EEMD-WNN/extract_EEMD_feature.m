@@ -14,6 +14,7 @@ function F = extract_EEMD_feature(A_sensitive)
         % feature 2: kurtosis
         F(2, m) = kurtosis(A_sensitive(:, 1, m));
         % feature 3: shape factor
+        F(3, m) = sqrt(sum(A_sensitive(:, 1, m) .^ 2) / N) / (sumabs(A_sensitive(:, 1, m)) / N);
         % feature 4: impulse factor
         % feature 5: mean frequency
         % feature 6: root mean square frequency
