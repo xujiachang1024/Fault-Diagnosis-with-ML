@@ -3,7 +3,7 @@ m_EEMD = 7;
 M_ens = 10;
 I_imf = 4;
 sf = 12000;
-z = 1;
+z = 1.5;
 
 % combine EEMD features for normal
 load('data/interim/CWRU/a1_normal.mat');
