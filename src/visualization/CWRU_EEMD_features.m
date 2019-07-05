@@ -3,7 +3,7 @@ m_EEMD = 7;
 M_ens = 10;
 I_imf = 4;
 sf = 12000;
-z = 0.5;
+z = 0;
 
 % combine EEMD features for normal
 load('data/interim/CWRU/a1_normal.mat');
@@ -84,9 +84,9 @@ for f=1:m_EEMD
     plot(F_EEMD_a5(f, :), 'Marker' , '^');
     plot(F_EEMD_a6(f, :), 'Marker' , 'p');
     plot(F_EEMD_a7(f, :), 'Marker' , 'h');
-    title(strcat('CWRU Data: EEMD Feature #', num2str(f)));
+    title(strcat('CWRU Data: EEMD Feature #', num2str(f), ', z=', num2str(z)));
     xlabel('Sample point');
     ylabel(strcat('F', num2str(f)));
     legend('Normal', 'OR 014', 'IR 007', 'IR 014', 'IR 021', 'IR 028', 'B 014', 'Location', 'northeastoutside');
-    saveas(fig, strcat('reports/figures/CWRU_EEMD_z', num2str(z), '_F', num2str(f), '.png'));
+    saveas(fig, strcat('reports/figures/CWRU_EEMD_F', num2str(f), '_z', num2str(z), '.png'));
 end
