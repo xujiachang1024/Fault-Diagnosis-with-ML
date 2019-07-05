@@ -1,7 +1,7 @@
 clear;
 F = 13;
 sf = 12000;
-z = 0;
+z = ;
 
 % combine freq-domain features for normal
 load('data/interim/CWRU/a1_normal.mat');
