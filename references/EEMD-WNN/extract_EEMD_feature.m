@@ -20,11 +20,11 @@ function F = extract_EEMD_feature(A, sf, z)
         % feature 4: impulse factor
         F(4, m) = max(abs(A(:, 1, m))) / (sum(abs(A(:, 1, m))) / N);
         % feature 5: mean frequency
-        F(5, m) = compute_mean_frequency(x, sf, z);
+        F(5, m) = compute_mean_frequency(A(:, 1, m), sf, z);
         % feature 6: root mean square frequency
-        F(6, m) = compute_root_mean_square_frequency(x, sf, z);
+        F(6, m) = compute_root_mean_square_frequency(A(:, 1, m), sf, z);
         % feature 7: standard deviation frequency
-        F(7, m) = compute_standard_deviation_frequency(x, sf, z);
+        F(7, m) = compute_standard_deviation_frequency(A(:, 1, m), sf, z);
     end 
 end
 
