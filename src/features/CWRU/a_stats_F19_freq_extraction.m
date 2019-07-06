@@ -15,5 +15,5 @@ for z=[0 0.5 1 1.5 2]
         F(:, m) = real(f19(s, K, f, F11, F12));
     end
     data_sink_path = strcat('data/processed/CWRU/a_stats_F19_freq_z', num2str(z), '.mat');
-    save(data_sink_path, 'F', 'Y');
+    save(data_sink_path, 'F', 'T_number', 'T_onehot');
 end 
