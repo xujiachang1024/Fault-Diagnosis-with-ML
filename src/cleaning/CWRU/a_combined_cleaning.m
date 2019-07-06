@@ -32,14 +32,22 @@ X(:, 501:600) = x;
 load('data/interim/CWRU/a7_b_fault_014.mat');
 X(:, 601:700) = x;
 
-Y = zeros(1, M);
-Y(:, 001:100) = 1;
-Y(:, 101:200) = 2;
-Y(:, 201:300) = 3;
-Y(:, 301:400) = 4;
-Y(:, 401:500) = 5;
-Y(:, 501:600) = 6;
-Y(:, 601:700) = 1;
+% generate numerical representation of target value
+T_number = zeros(1, M);
+T_number(:, 001:100) = 1;
+T_number(:, 101:200) = 2;
+T_number(:, 201:300) = 3;
+T_number(:, 301:400) = 4;
+T_number(:, 401:500) = 5;
+T_number(:, 501:600) = 6;
+T_number(:, 601:700) = 7;
+
+% generate one-hot encoding of target value
+T_onehot = zeros(7, M);
+for m=1:M
+    t = T_number(:, m);
+    T_onehot(t, m) = 1;
+end
 
 data_sink_path = 'data/interim/CWRU/a_combined.mat';
-save(data_sink_path, 'X', 'Y');
+save(data_sink_path, 'X', 'T_number', 'T_onehot');
