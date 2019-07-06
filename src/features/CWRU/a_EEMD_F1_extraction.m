@@ -16,5 +16,5 @@ for z=[0 0.5 1 1.5 2]
     F_EEMD = extract_EEMD_feature(A_sen, sf, z);
     F = real(F_EEMD(1, :));
     data_sink_path = strcat('data/processed/CWRU/a_EEMD_F1_z', num2str(z), '.mat');
-    save(data_sink_path, 'F', 'Y');
+    save(data_sink_path, 'F', 'T_number', 'T_onehot');
 end
