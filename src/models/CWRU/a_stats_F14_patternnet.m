@@ -21,7 +21,6 @@ setdemorandstream(491218382)
 
 % initialise the pattern neural network
 net = patternnet([10], 'traingdx', 'crossentropy');
-view(net);
 
 % train the pattern neural network
 [net,tr] = train(net, F_stacked, T_onehot);
