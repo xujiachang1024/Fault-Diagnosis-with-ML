@@ -27,5 +27,5 @@ for m = 1:M
     T_onehot(t, m) = 1;
 end
 
-data_sink_path = 'data/interim/CWRU/b_combined.mat';
+data_sink_path = 'data/interim/MFPT/b_combined.mat';
 save(data_sink_path, 'X', 'T_number', 'T_onehot');
