@@ -5,41 +5,41 @@ F_stacked = zeros(Z, M);
 F_avg = zeros(3, M);
 
 % load the CWRU data set, and average EEMD feature #5
-load('data/processed/CWRU/a_EEMD_F5_z0.mat');
+load('data/processed/CWRU/c_EEMD_F5_z0.mat');
 F_stacked(1, :) = F;
-load('data/processed/CWRU/a_EEMD_F5_z0.5.mat');
+load('data/processed/CWRU/c_EEMD_F5_z0.5.mat');
 F_stacked(2, :) = F;
-load('data/processed/CWRU/a_EEMD_F5_z1.mat');
+load('data/processed/CWRU/c_EEMD_F5_z1.mat');
 F_stacked(3, :) = F;
-load('data/processed/CWRU/a_EEMD_F5_z1.5.mat');
+load('data/processed/CWRU/c_EEMD_F5_z1.5.mat');
 F_stacked(4, :) = F;
-load('data/processed/CWRU/a_EEMD_F5_z2.mat');
+load('data/processed/CWRU/c_EEMD_F5_z2.mat');
 F_stacked(5, :) = F;
 F_avg(1, :) = mean(F_stacked, 1);
 
 % load the CWRU data set, and average EEMD feature #6
-load('data/processed/CWRU/a_EEMD_F6_z0.mat');
+load('data/processed/CWRU/c_EEMD_F6_z0.mat');
 F_stacked(1, :) = F;
-load('data/processed/CWRU/a_EEMD_F6_z0.5.mat');
+load('data/processed/CWRU/c_EEMD_F6_z0.5.mat');
 F_stacked(2, :) = F;
-load('data/processed/CWRU/a_EEMD_F6_z1.mat');
+load('data/processed/CWRU/c_EEMD_F6_z1.mat');
 F_stacked(3, :) = F;
-load('data/processed/CWRU/a_EEMD_F6_z1.5.mat');
+load('data/processed/CWRU/c_EEMD_F6_z1.5.mat');
 F_stacked(4, :) = F;
-load('data/processed/CWRU/a_EEMD_F6_z2.mat');
+load('data/processed/CWRU/c_EEMD_F6_z2.mat');
 F_stacked(5, :) = F;
 F_avg(2, :) = mean(F_stacked, 1);
 
 % load the CWRU data set, and average frequency-domain feature #14
-load('data/processed/CWRU/a_stats_F14_freq_z0.mat');
+load('data/processed/CWRU/c_stats_F14_freq_z0.mat');
 F_stacked(1, :) = F;
-load('data/processed/CWRU/a_stats_F14_freq_z0.5.mat');
+load('data/processed/CWRU/c_stats_F14_freq_z0.5.mat');
 F_stacked(2, :) = F;
-load('data/processed/CWRU/a_stats_F14_freq_z1.mat');
+load('data/processed/CWRU/c_stats_F14_freq_z1.mat');
 F_stacked(3, :) = F;
-load('data/processed/CWRU/a_stats_F14_freq_z1.5.mat');
+load('data/processed/CWRU/c_stats_F14_freq_z1.5.mat');
 F_stacked(4, :) = F;
-load('data/processed/CWRU/a_stats_F14_freq_z2.mat');
+load('data/processed/CWRU/c_stats_F14_freq_z2.mat');
 F_stacked(5, :) = F;
 F_avg(3, :) = mean(F_stacked, 1);
 
