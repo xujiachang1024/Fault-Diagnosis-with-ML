@@ -1,0 +1,49 @@
+\section{Template Descriptions}
+
+\subsection{Template Folder Structure}
+	After unzip the Latex template, you will find the following folders:
+\begin{itemize}
+	\item \textbf{``root'' folder:} The file ``thesis.tex'' is the master file of the whole document, which defines the structure of the chapters and other settings.
+	\item \textbf{``contents'' folder:}  This is the folder for all chapters. Use the path \begin{verbatim}contents/chapter_filename\end{verbatim} when including chapters. The following files can be found in this folder.
+	\begin{itemize}
+		\item acknowledgements.tex: the contents of the Acknowledgement chapter. 
+		\item abstract.tex: the contents of the Abstract chapter. 
+		\item nomenclature.tex: the contents of the Nomenclature chapter. 
+		\item introduction.tex: the contents of the Introduction chapter. 
+		\item background.tex: the contents of the Background Theories chapter. 
+		\item literature.tex: the contents of the literature review.
+		\item approach.tex: the contents of the approach section.
+		\item results.tex: the contents of the results section. 
+		\item conclusion.tex: the contents of the Conclusion chapter. 
+		\item app\_1.tex: the contents of the Appendix chapter. 
+		\item sample\_1.bib: the bibtex file for references. Remember to run ``bibtex'' to update the list of reference section.
+		\item TemplateDescriptions.tex: this is the content of this chapter (Template Description). Remove the line \begin{verbatim} \include{contents/TemplateDescriptions}\end{verbatim} from ``thesis.tex'' which will remove the Chapter ``Template Descriptions'' from the document.
+	\end{itemize}
+	Create a new chapter file if necessary.
+	\item \textbf{``figures'' folder:} This is the folder for all figures. Use the path \begin{verbatim}contents/figure_filename\end{verbatim} when including figures.
+\end{itemize}
+
+contents/sample1
+bibtex, run bibtex
+
+\subsection{Student and Project Information}
+	The master file of this template is ``thesis.tex''. Change the following lines accordingly in ``thesis.tex'' to include your information.
+
+\begin{verbatim}
+%===========================================================
+% Change below accordingly
+%===========================================================
+\modulecode{7CCSMPRJ}
+\submissiontitle{Individual Project Submission \red{201X/1X}}
+\studentnumber{\red{Student number goes here}}
+\programme{\red{Programme title goes here}}
+\supervisor{\red{Supervisor's name goes here}}
+\wordcount{\red{Word count goes here}}
+\title{\red{Project title goes here}}
+\author{\red{Your name goes here}}
+\ReleaseProject{0} %Replace 0 by 1 if release project;
+ Replace 0 by 2 if not release project
+%===========================================================
+\end{verbatim}
+
+	Remove the line \begin{verbatim} \include{contents/TemplateDescriptions}\end{verbatim} from ``thesis.tex'' which will remove the Chapter ``Template Descriptions'' from the document.

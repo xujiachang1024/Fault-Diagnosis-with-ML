@@ -1,0 +1,9 @@
+This is makeindex, version 2.15 [TeX Live 2017] (kpathsea + Thai support).
+Scanning input file Thesis.idx...
+!! Input index error (file = Thesis.idx, line = 1):
+   -- Extra `|' at position 84 of first argument.
+!! Input index error (file = Thesis.idx, line = 2):
+   -- Extra `|' at position 80 of first argument.
+done (0 entries accepted, 2 rejected).
+Nothing written in Thesis.ind.
+Transcript written in Thesis.ilg.

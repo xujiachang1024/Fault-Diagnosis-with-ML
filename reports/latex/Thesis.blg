@@ -1,0 +1,61 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: Thesis.aux
+A level-1 auxiliary file: contents/TemplateDescriptions.aux
+A level-1 auxiliary file: contents/acknowledgements.aux
+A level-1 auxiliary file: contents/abstract.aux
+A level-1 auxiliary file: contents/nomenclature.aux
+A level-1 auxiliary file: contents/figures_tables.aux
+A level-1 auxiliary file: contents/introduction.aux
+A level-1 auxiliary file: contents/background.aux
+A level-1 auxiliary file: contents/literature.aux
+A level-1 auxiliary file: contents/approach.aux
+A level-1 auxiliary file: contents/results.aux
+A level-1 auxiliary file: contents/conclusion.aux
+The style file: ieeetr.bst
+A level-1 auxiliary file: contents/app_1.aux
+Database file #1: contents/sample1.bib
+Warning--I didn't find a database entry for "website:fermentas-lambda"
+Warning--empty publisher in Joh11
+You've used 3 entries,
+            1876 wiz_defined-function locations,
+            509 strings with 4072 characters,
+and the built_in function-call counts, 555 in all, are:
+= -- 57
+> -- 16
+< -- 0
++ -- 7
+- -- 4
+* -- 33
+:= -- 92
+add.period$ -- 5
+call.type$ -- 3
+change.case$ -- 1
+chr.to.int$ -- 0
+cite$ -- 4
+duplicate$ -- 29
+empty$ -- 56
+format.name$ -- 4
+if$ -- 130
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 3
+newline$ -- 14
+num.names$ -- 3
+pop$ -- 10
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 12
+stack$ -- 0
+substring$ -- 19
+swap$ -- 7
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 6
+width$ -- 4
+write$ -- 31
+(There were 2 warnings)

@@ -1,0 +1,17 @@
+\begin{thebibliography}{1}
+
+\bibitem{Joh11}
+I.~M. Johnstone, {\em Gaussian estimation: Sequence and multiresolution
+  models}.
+\newblock 2011.
+
+\bibitem{Doe11}
+J.~Doe, {\em The Title}.
+\newblock PhD thesis, University of Mars, 2011.
+
+\bibitem{JohSil05}
+I.~Johnstone and B.~Silverman, ``Ebayesthresh: R programs for empirical bayes
+  thresholding,'' {\em Journal of Statistical Software}, vol.~12, no.~8,
+  pp.~1--38, 2005.
+
+\end{thebibliography}

@@ -1,0 +1,136 @@
+%&latexf
+\documentclass[]{kclthesis}
+
+%===========================================================
+% Change below accordingly
+%===========================================================
+\modulecode{7CCSMPRJ/7CCSMCFP/7CCSMDPJ/7CCSMUIP} %Use the right module code
+\submissiontitle{Individual Project Submission \red{201X/1X}}
+\studentnumber{\red{Student number goes here}}
+\programme{\red{Programme title goes here}}
+\supervisor{\red{Supervisor's name goes here}}
+\wordcount{\red{Word count goes here}}
+\title{\red{Project title goes here}}
+\author{\red{Your name goes here}}
+\ReleaseProject{0} %Replace 0 by 1 if release project; Replace 0 by 2 if not release project
+%===========================================================
+
+
+% nomenclature 
+\usepackage[intoc]{nomencl} 
+%\makenomenclature
+\makeindex
+% glossaries
+\usepackage[toc, acronym]{glossaries} 
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+
+\linespread{1}
+\newfam\msbfam
+\def\Bbb#1{\fam\msbfam\relax#1}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{exa}{Example}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{notation}[theorem]{Notation}
+\newtheorem{assumption}[theorem]{Assumption}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\newcommand{\ind}{1\hspace{-2.1mm}{1}} %Indicator Function
+\newcommand{\I}{\mathtt{i}}
+\newcommand{\D}{\mathrm{d}}
+\newcommand{\E}{\mathrm{e}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\sgn}{\mathrm{sgn}}
+\newcommand{\atanh}{\mathrm{arctanh}}
+\def\equalDistrib{\,{\buildrel \Delta \over =}\,}
+\numberwithin{equation}{section}
+\def\blue#1{\textcolor{blue}{#1}}
+\def\red#1{\textcolor{red}{#1}}
+
+\setcounter{tocdepth}{5}
+\setcounter{secnumdepth}{5}
+
+% customize your general setup here
+%\title{\red{Project title goes here}}
+%\author{\red{Your name goes here}}
+
+
+\begin{document}
+\pagenumbering{gobble}
+
+
+%%%%%% depends what you like, might try out the other frontpage as well
+\maketitle 		% official styled layout
+\maketitleTwo 	% adapted layout which looks nicer from my point of view.
+
+%%%%%% empty page after main page.
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
+%%%%%% Acknowledgements, Abstract, Nomenclature
+\include{contents/TemplateDescriptions} %Remove this line after reading
+\include{contents/acknowledgements}
+\include{contents/abstract}
+\include{contents/nomenclature}
+%%%%%% Table of contents
+
+\pagenumbering{roman}
+\setcounter{tocdepth}{4}
+\tableofcontents
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{contents/figures_tables}
+\fancyhead{}
+\fancyfoot{}
+\pagestyle{fancy} 
+%\fancyhead{\sffamily\small \thepage}
+%\fancyhead{\sffamily\small \nouppercase{\rightmark}}
+\fancyhead[RO,LE]{\sffamily\small \thepage}
+\fancyhead[LO,RE]{\sffamily\small \nouppercase{\rightmark}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.0pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%% Main content
+\pagenumbering{arabic}
+
+%Insert if necessary if more chapters are needed by creating a new .tex file in the folder ``contents'' and use \include{filename} to include the new chapter.
+%Modify the section headings if necessary
+%Insert more sections if necessary
+\include{contents/introduction}
+\include{contents/background}
+\include{contents/literature}
+\include{contents/approach}
+\include{contents/results}
+\include{contents/conclusion}
+
+%%%%% References
+\bibliographystyle{ieeetr}
+\bibliography{contents/sample1}
+
+%%%%% Declaration
+%\include{structure/declaration}
+
+%%%%% Appendix 
+%Insert more section if necessary if more appendix sections are needed
+%Remove or remark the following two lines if appendix is not necessary
+\appendix
+\include{contents/app_1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}

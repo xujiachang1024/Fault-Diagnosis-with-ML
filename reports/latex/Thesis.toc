@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}Template Descriptions}{}{section.1}
+\contentsline {subsection}{\numberline {1.1}Template Folder Structure}{}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Student and Project Information}{}{subsection.1.2}
+\contentsline {section}{\numberline {2}Introduction}{1}{section.2}
+\contentsline {section}{\numberline {3}Background}{2}{section.3}
+\contentsline {section}{\numberline {4}Related Work}{3}{section.4}
+\contentsline {section}{\numberline {5}Approach}{4}{section.5}
+\contentsline {section}{\numberline {6}Results}{5}{section.6}
+\contentsline {section}{\numberline {7}Conclusion}{6}{section.7}
+\contentsline {section}{References}{7}{section*.6}
+\contentsline {section}{\numberline {A}Appendix}{8}{appendix.A}
+\contentsline {subsection}{\numberline {A.1}Points to Note}{8}{subsection.A.1}
+\contentsline {section}{\numberline {B}Review of stochastic calculus}{9}{appendix.B}
+\contentsline {subsection}{\numberline {B.1}Riemann integration}{9}{subsection.B.1}
+\contentsline {subsection}{\numberline {B.2}The It\^o integral}{9}{subsection.B.2}

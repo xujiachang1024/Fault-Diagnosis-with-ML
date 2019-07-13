@@ -1,0 +1,90 @@
+\ifglsentryexists{lvm}{}%
+{%
+\gls@defglossaryentry{lvm}%
+{%
+name={LVM},%
+sort={LVM},%
+type={acronym},%
+first={Logical Volume Manager\glsspace (LVM)},%
+firstplural={Logical Volume Managers\glsspace (LVMs)},%
+text={LVM},%
+plural={LVMs},%
+description={Logical Volume Manager},%
+descriptionplural={Logical Volume Manager\acrpluralsuffix },%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Logical Volume Manager},%
+longplural={Logical Volume Managers},%
+short={LVM},%
+shortplural={LVMs},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{pi}{}%
+{%
+\gls@defglossaryentry{pi}%
+{%
+name={\ensuremath {\pi }},%
+sort={pi},%
+type={main},%
+first={\protect \ensuremath {\pi }},%
+firstplural={\protect \ensuremath {\pi }s},%
+text={\protect \ensuremath {\pi }},%
+plural={\protect \ensuremath {\pi }s},%
+description={ratio of circumference of circle to its diameter},%
+descriptionplural={ratio of circumference of circle to its diameter},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{Linux}{}%
+{%
+\gls@defglossaryentry{Linux}%
+{%
+name={Linux},%
+sort={Linux},%
+type={main},%
+first={Linux},%
+firstplural={Linuces},%
+text={Linux},%
+plural={Linuces},%
+description={is a generic term referring to the family of Unix-like computer operating systems that use the Linux kernel},%
+descriptionplural={is a generic term referring to the family of Unix-like computer operating systems that use the Linux kernel},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
