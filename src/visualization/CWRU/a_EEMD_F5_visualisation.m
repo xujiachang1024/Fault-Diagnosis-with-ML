@@ -16,6 +16,7 @@ F_stacked(5, :) = F;
 
 F_avg = mean(F_stacked, 1);
 F_med = median(F_stacked, 1);
+z_score = '0005101520';
 
 for z=1:Z
     fig = figure('Position', [0 0 400 300]);hold on
@@ -26,10 +27,11 @@ for z=1:Z
     plot(F_stacked(z, 401:500), 'Marker' , '^');
     plot(F_stacked(z, 501:600), 'Marker' , 'p');
     plot(F_stacked(z, 601:700), 'Marker' , 'h');
-    title(strcat('CWRU Data: EEMD Feature #5, z=', num2str(0.5 * (z - 1))));
+    title(strcat('CWRU subset A: EEMD F5, z=', num2str(0.5 * (z - 1))));
     xlabel('Sample point');
     ylabel('F5');
-    legend('Normal', 'OR 014', 'IR 007', 'IR 014', 'IR 021', 'IR 028', 'B 014', 'Location', 'northeastoutside');
+    legend('Class 1', 'Class 2', 'Class 3', 'Class 4', 'Class 5', 'Class 6', 'Class 7', 'Location', 'northeastoutside');
+    saveas(fig, strcat('reports/figures/CWRU_features/CWRU_EEMD_F5_z', z_score(z*2-1:z*2), '.png'));
 end
 
 fig = figure('Position', [0 0 400 300]);hold on
