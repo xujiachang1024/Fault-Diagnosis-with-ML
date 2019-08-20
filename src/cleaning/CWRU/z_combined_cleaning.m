@@ -1,6 +1,6 @@
 N = 1024;
 M = 100;
-Z = 0.05;
+Z = 0.5;
 
 load('data/interim/CWRU/a_combined.mat');
 
