@@ -1,6 +1,6 @@
 %{
     Compute 19 statistical features for MEISVM
-    @param x: a signal seris
+    @param x: a signal series
     @param N: the number of data points
     @param sf: the sampling frequency
     @return F: the feature vector

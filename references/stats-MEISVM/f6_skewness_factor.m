@@ -1,6 +1,6 @@
 %{
     Feature 6: the skewness factor
-    @param x: a signal seris
+    @param x: a signal series
     @param N: the number of data points
     @return F6: feature 6, the skewness factor
 %}

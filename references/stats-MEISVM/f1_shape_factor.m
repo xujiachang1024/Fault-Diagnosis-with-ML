@@ -1,6 +1,6 @@
 %{
     Feature 1: the shape factor
-    @param x: a signal seris
+    @param x: a signal series
     @param N: the number of data points
     @return F1: feature 1, the shape factor
 %}

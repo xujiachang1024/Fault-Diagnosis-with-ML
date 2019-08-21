@@ -1,6 +1,6 @@
 %{
     Feature 2: the crest factor
-    @param x: a signal seris
+    @param x: a signal series
     @param N: the number of data points
     @return F2: feature 2, the crest factor
 %}

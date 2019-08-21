@@ -1,6 +1,6 @@
 %{
     Feature 5: the kurtosis factor
-    @param x: a signal seris
+    @param x: a signal series
     @param N: the number of data points
     @return F5: feature 5, the kurtosis factor
 %}

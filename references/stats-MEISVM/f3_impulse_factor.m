@@ -1,6 +1,6 @@
 %{
     Feature 3: the impulse factor
-    @param x: a signal seris
+    @param x: a signal series
     @param N: the number of data points
     @return F3: feature 3, the impulse
 %}
