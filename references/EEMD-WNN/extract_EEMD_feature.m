@@ -1,15 +1,17 @@
 %{
-    Select sensitive IMF after EEMD algoirithm
-    @param A: the sensitive IMF (N, 1, M)
+    Extract EEMD features from the sensitive IMF
+    @param A: the sensitive IMF, size=(N, 1, M)
     @param sf: the sampling frequency
-    @param z: the z-score
-    @return 
+    @param z: the z-score threshold to filter underlying frequencies
+    @return F: the feature matrix, size=(7, M)
 %}
 function F = extract_EEMD_feature(A, sf, z)
     % N: the number of data points in each sample
     % M: the number of samples
     [N, ~, M] = size(A);
+    % initialise the feature matrix
     F = zeros(7, M);
+    % extract the feature vector for each sample
     for m=1:M
         % feature 1: standard deviation
         F(1, m) = std(A(:, 1, m));
